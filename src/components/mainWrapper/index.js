@@ -10,7 +10,9 @@ const MainWrapper = (props) => {
             <div className={styles.contaienr}>
                 { props.children }
             </div>
-            <LowerFooter />
+            <div className={styles.footer}>
+                <LowerFooter />
+            </div>
         </div>
     )
 } 

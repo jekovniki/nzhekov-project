@@ -1,0 +1,21 @@
+.homepage-teaser img {
+    width:100%;
+    height:85vh;
+}
+
+.teaser-text {
+    color:#ffffff;
+    position:absolute;
+    top:10em;
+    left:5em;
+}
+
+.teaser-text h1 {
+    font-size:4em;
+}
+
+@media screen and (max-width:900px) {
+    .homepage-teaser img {
+        height:auto;
+    }
+}
