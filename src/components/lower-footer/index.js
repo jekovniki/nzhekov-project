@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './index.module.css'
 import getUsefulLinks from '../../utils/useful-links'
-import Link from '../link'
+import MenuLinks from '../menu'
 
 const LowerFooter = () => {
     const links = getUsefulLinks()
@@ -12,15 +12,7 @@ const LowerFooter = () => {
                 Copyright © 2020 Nikolay Zhekov. All rights reserved.
                 </div>
                 <div className={styles[`useful-links`]}>
-                <nav>
-                    {
-                    links.map(usefulLink => {
-                        return (
-                        <Link key={usefulLink.title} href={usefulLink.link} name={usefulLink.title} />
-                        )
-                    })
-                    }
-                    </nav>
+                <MenuLinks links={links} />
                     </div>
                 </div>
             </div>

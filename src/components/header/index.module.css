@@ -1,4 +1,4 @@
-.header {
+#header {
     display:flex!important;
     justify-content: space-around;
     background-color:#262b3e;
