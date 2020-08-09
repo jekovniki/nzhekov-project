@@ -1,7 +1,22 @@
-.wrapper {
-    padding:0 5%;
-}
-
 .lower-footer {
     padding: 20px 0px;
+    text-align:center;
+}
+
+@media screen and (min-width:850px) {
+    .wrapper {
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+        min-height:30px;
+        margin:0 5%;
+    }
+    .copyright {
+        flex:1;
+        text-align:left;
+    }
+    .useful-links {
+        flex:1;
+        text-align:right;
+    }
 }

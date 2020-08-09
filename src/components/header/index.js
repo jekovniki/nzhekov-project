@@ -2,7 +2,7 @@ import React from 'react'
 import logo from '../../images/logo.png'
 import Link from '../link'
 import styles from './index.module.css'
-import getNavigation from '../../utils/navigation'
+import getNavigation from '../../utils/main-navigation'
 
 const Header = () => {
     const links = getNavigation()

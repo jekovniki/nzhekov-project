@@ -34,10 +34,22 @@ nav > li > a {
     nav > li > a {
         padding:1em;
     }
+    nav > li > a:first-child {
+        padding:1em 1em 1em 0;;
+    }
+    nav > li > a:last-child {
+        padding:1em 0.1em 1em 1em;;
+    }
 }
 
 @media screen and (min-width:900px) {
     nav > li > a {
         padding:2.75em;
+    }
+    nav > li > a:first-child {
+        padding:2.75em 2.75em 2.75em 0;;
+    }
+    nav > li > a:last-child {
+        padding:2.75em 0.5em 2.75em 2.75em;;
     }
 }
