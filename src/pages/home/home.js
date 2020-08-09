@@ -4,11 +4,9 @@ import MainWrapper from '../../components/mainWrapper'
 
 const Homepage = () => {
   return (
-    <div className="App">
       <MainWrapper>
-      <p>Ivan</p>
+      <p>Homepage</p>
       </MainWrapper>
-    </div>
   );
 }
 

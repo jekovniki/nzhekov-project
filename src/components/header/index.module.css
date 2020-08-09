@@ -1,0 +1,33 @@
+.header {
+    display:flex!important;
+    justify-content: space-around;
+    background-color:#262b3e;
+    align-items:center;
+    min-height:100px;
+    position:sticky;
+}
+
+.header-logo {
+    flex:1;
+    padding:0 40px;
+}
+
+.navigation {
+    flex:2;
+    text-align:right;
+}
+
+nav {
+    list-style:none;
+    display:inline-flex;
+}
+
+nav > li > a {
+    color:#fff;
+    padding:40px 30px;
+    text-decoration:none;
+}
+
+.header-logo img {
+    width: 150px;
+}

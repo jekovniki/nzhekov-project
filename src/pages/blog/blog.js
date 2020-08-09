@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './blog.module.css';
+import MainWrapper from '../../components/mainWrapper'
 
 
 const BlogPage = () => {
   return (
-    <div className="App">
-      <p>Tova e blog stranica</p>
-    </div>
+    <MainWrapper>
+      <p>Blog page</p>
+      </MainWrapper>
   );
 }
 
