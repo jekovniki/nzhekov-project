@@ -1,0 +1,19 @@
+.twoCol {
+    display:flex;
+}
+
+.column-one, .column-two {
+    flex:1;
+}
+
+.column-one img{
+    height:100%;
+    width:100%;
+}
+
+.column-two {
+    display:inline-flex;
+    align-items:center;
+    justify-content: center;
+    flex-flow:column;
+}

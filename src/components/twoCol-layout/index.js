@@ -1,6 +1,7 @@
 import React from 'react'
-import styles from '../2col-layout/index.module.css'
 import Title from '../title'
+import styles from './index.module.css'
+
 
 
 const TwoColumnsLayout = ({image,headline , children}) => {
@@ -11,7 +12,9 @@ const TwoColumnsLayout = ({image,headline , children}) => {
                 <img src={ image } />
             </div>
             <div className={styles[`column-two`]}>
+                <div className={styles.rightCol}>
                 <Title title={headline} />
+                </div>
             { children }
             </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 import MainWrapper from '../../components/mainWrapper'
-import TwoColumnsLayout from '../../components/2col-layout'
+import TwoColumnsLayout from '../../components/twoCol-layout'
 
 const Error404Page = () => {
     return (
