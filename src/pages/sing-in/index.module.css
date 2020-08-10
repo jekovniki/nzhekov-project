@@ -9,6 +9,10 @@
     width:300px;
 }
 
+.form-container button {
+    border: 1px solid #c9b38c;
+}
+
 .form-container button:hover {
-    background-color:#ededed;
+    background-color:#ffffff;
 }
