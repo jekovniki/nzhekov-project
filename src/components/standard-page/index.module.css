@@ -1,0 +1,11 @@
+.headline {
+    text-align:center;
+}
+.page-teaser img {
+    position:absolute;
+    height:300px;
+}
+
+#main {
+    margin: 0 5%;
+}

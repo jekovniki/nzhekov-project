@@ -1,0 +1,21 @@
+.page-teaser  img{
+    height:300px;
+    width:100%;
+    object-fit: cover;
+}
+
+.page-teaser h1, h3 {
+    text-align:center;
+    color:#000000;
+}
+
+.page-teaser .teaser-headline {
+    position:absolute!important;
+    text-align:center;
+}
+
+.page-teaser {
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+}
