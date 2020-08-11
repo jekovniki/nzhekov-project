@@ -1,0 +1,56 @@
+.footer {
+    padding: 5%;
+    display:flex;
+    background-color: #262b3e;
+    color:#cdced0;
+    justify-content: space-between;
+}
+
+h3 {
+    color:#ffffff;
+}
+
+.wrapper .useful-links nav {
+    display:flex;
+    flex-flow:column;
+    list-style:none;
+}
+
+.wrapper .practice-area nav {
+    display:flex;
+    flex-flow:column;
+    list-style:none;
+}
+
+.wrapper .practice-area nav > li {
+    margin:0.25em;
+}
+.wrapper .useful-links nav > li {
+    margin:0.25em;
+}
+
+.wrapper .practice-area nav > li > a {
+    color: #cdced0;
+    padding:0;
+}
+.wrapper .useful-links nav > li > a {
+    padding:0;
+    color: #cdced0;
+}
+
+@media screen and (min-width:700px) {
+    .wrapper {
+        flex:1;
+        padding: 0 10px;
+    }
+    .wrapper:first-child {
+        padding: 0 10px 0 0;
+    }
+    .wrapper:last-child {
+        padding: 0 0 0 10px;
+    }
+}
+
+p {
+    margin:0;
+}
