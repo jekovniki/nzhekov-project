@@ -4,14 +4,13 @@
     object-fit: cover;
 }
 
-.page-teaser h1, h3 {
-    text-align:center;
-    color:#000000;
-}
-
 .page-teaser .teaser-headline {
     position:absolute!important;
     text-align:center;
+}
+
+.page-teaser > .teaser-headline > h1, h3 {
+    color:#000000;
 }
 
 .page-teaser {
