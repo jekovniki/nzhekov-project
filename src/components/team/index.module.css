@@ -1,0 +1,48 @@
+.team {
+    width:80%;
+    display:flex;
+}
+.team-member {
+    display:flex;
+    flex-flow:column;
+    width:152px;
+}
+/*
+.info {
+    display:none;
+}
+
+.team-member:hover > .info {
+    display:block;
+    transition:0.4s;
+}
+*/
+
+.info {
+    position:absolute;
+    display:flex;
+    flex-flow:column;
+    justify-content: space-around;
+    background:#262b3e;
+    color:#fff;
+    opacity:0;
+}
+.team-member:hover > .info {
+    opacity:0.9;
+    width:152px;
+    height:200px;
+    transition:0.4s;
+}
+
+.info p {
+    padding:10px;
+}
+.picture img {
+    object-fit: cover;
+    width:152px;
+    height:200px;
+}
+
+.name {
+    text-align:center;
+}

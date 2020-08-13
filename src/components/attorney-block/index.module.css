@@ -1,0 +1,32 @@
+.attorney {
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+    flex-flow:column;
+    padding:20px;
+}
+.attorney-image {
+    flex:1;
+    text-align:center;
+}
+.attorney-title {
+    flex:1;
+    text-align:center;
+    text-transform:uppercase;
+    font-weight:700;
+    color:#c9b38c;
+}
+.attorney-text {
+    flex:2;
+    text-align:center;
+    color: #262b3e;
+    font-weight:300;
+}
+
+.attorney-text h2{
+    font-weight:300;
+}
+
+.attorney-text p {
+    color:#687693;
+}
