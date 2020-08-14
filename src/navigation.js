@@ -8,6 +8,7 @@ import Homepage from './pages/home/home'
 import BlogPage from './pages/blog/blog'
 import SignIn from './pages/sing-in/index'
 import SignInSuccess from './pages/sing-in-success/index'
+import SignUpSuccess from './pages/sing-up-success/index'
 import Error404Page from './pages/error/index'
 import SignUp from './pages/sign-up/index'
 import TeamPage from './pages/team/team'
@@ -29,7 +30,8 @@ const Navigation = () => {
                     <Route path="/blog" component={ BlogPage }/>
                     <Route path="/services" component={ ServicesPage }/>
                     <Route path="/sign-in" component={ SignIn }/>
-                    <Route path="/sign-in-success" component={ SignInSuccess }/>
+                    <PrivateRoute path="/sign-in-success" component={ SignInSuccess }/>
+                    <PrivateRoute path="/sign-up-success" component={ SignUpSuccess }/>
                     <Route path="/sign-up" component={ SignUp }/>
                     <Route path="/error-403" component={ Error403Page }/>
                     <Route component={ Error404Page } />
