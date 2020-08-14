@@ -20,7 +20,7 @@ const SignIn = ({ history }) => {
                 await app
                 .auth()
                 .signInWithEmailAndPassword(email.value, password.value)
-                history.push("/")
+                history.push("/sign-in-success")
             } catch (error) {
                 alert(error)
             }
@@ -34,7 +34,7 @@ const SignIn = ({ history }) => {
     const [currentUser, setCurrentUser] = useState(null);
 
     if (currentUser) {
-        return <Redirect to="/" />
+        return <Redirect to="/sign-in-success" />
     }
 
     return (
