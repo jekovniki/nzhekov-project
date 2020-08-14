@@ -1,0 +1,32 @@
+.services {
+    display:flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    text-align:center;
+}
+.service img {
+    cursor: pointer;
+}
+
+.service:hover > .description {
+    opacity:1;
+    transition:1s;
+}
+
+.services {
+    height:auto;
+}
+
+.service:hover {
+    height:300px;
+    transition:1s;
+}
+
+.description {
+    opacity:0;
+    text-align:left;
+    width:95%;
+    position:absolute;
+    left:0px;
+    padding:0 20px;
+}
