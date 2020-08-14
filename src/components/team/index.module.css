@@ -1,6 +1,7 @@
 .team {
     width:80%;
     display:flex;
+    padding: 20px 0;
 }
 .team-member {
     display:flex;
@@ -28,7 +29,7 @@
     opacity:0;
 }
 .team-member:hover > .info {
-    opacity:0.9;
+    opacity:0.85;
     width:152px;
     height:200px;
     transition:0.4s;

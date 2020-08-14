@@ -26,7 +26,7 @@ const getLawyers = () => {
         },
         {
             name: "Ivan Georgiev",
-            job: "Administrative law",
+            job: "Tax law",
             speciality: "public-law",
             field: "Public Law",
             img: "http://themegeniuslab.com/html/juristic-live-cp/assets/images/case-studies/img-1.jpg",
