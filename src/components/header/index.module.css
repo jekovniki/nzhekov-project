@@ -53,3 +53,6 @@ nav > li > a {
         padding:2.75em 0.5em 2.75em 2.75em;;
     }
 }
+.navigation > nav + nav > li > a {
+    cursor:pointer;
+}

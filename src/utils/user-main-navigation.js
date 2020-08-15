@@ -1,7 +1,7 @@
 
+const getUserNav = () => {
 
-const getNavigation = (username) => {
-    const navLink = [
+    const userNav = [
         {
             title: "Home",
             link: "/"
@@ -11,25 +11,20 @@ const getNavigation = (username) => {
             link: "/team"
         },
         {
+            title: "Profile",
+            link: `/profile`
+        },
+        {
             title: "Services",
             link: "/services"
         },
         {
             title: "Blog",
             link: "/blog"
-        },
-        {
-            title: "Sign Up",
-            link: "/sign-up"
-        },
-        {
-            title: "Sign In",
-            link: "/sign-in"
-        },
-
+        }
     ]
-    return navLink;
+    return userNav;
 
 }
 
-export default getNavigation
+export default getUserNav

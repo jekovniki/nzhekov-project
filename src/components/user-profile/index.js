@@ -17,7 +17,7 @@ const UserProfile = () => {
 
     const [user, setUser] = useState({})
 
-    useEffect( () => {content()})
+    useEffect( () => {content()}, [])
 
     return (
         <div className={styles[`user-profile`]}>
