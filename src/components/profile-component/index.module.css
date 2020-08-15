@@ -1,0 +1,33 @@
+.profile {
+    margin:40px 0;
+}
+
+.profile .profile-picture img {
+    width:400px;
+    object-fit: cover;
+    border-radius:50%;
+}
+
+
+@media screen and (min-width:786px) {
+    .profile {
+        display:flex;
+        justify-content:space-around;
+    }
+    .profile-picture {
+        flex:1;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .profile-data {
+        flex:1;
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+.profile-data p {
+    padding:10px;
+}

@@ -11,7 +11,7 @@ const PublishBlog = () => {
 
     const submit = (data) => {
         fetch(baseApiUrl + "blogs.json", {
-            method: 'POST', // or 'PUT'
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },

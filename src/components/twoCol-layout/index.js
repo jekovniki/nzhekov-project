@@ -5,7 +5,6 @@ import styles from './index.module.css'
 
 
 const TwoColumnsLayout = ({image,headline , children}) => {
-    console.log(styles)
     return (
         <div className={styles.twoCol}>
             <div className={styles[`column-one`]}>
