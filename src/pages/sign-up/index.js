@@ -68,7 +68,7 @@ const SignUp = ({ history }) => {
                     <Input value={firstname} onChange={(e) => setFirstName(e.target.value)} label="First Name" id="firstname" />
                     <Input value={lastname} onChange={(e) => setLastName(e.target.value)} label="Last Name" id="lastname" />
                     <Select label="Select speciality" id="speciality" onChange={(e) => {console.log(e);setSelect(e.target.value)}} />
-                    <Input value={password} onChange={(e) => setPassword(e.target.value)} label="Password" id="password" />
+                    <Input value={password} onChange={(e) => setPassword(e.target.value)} label="Password" id="password" type="password" />
                     <MainBtn type="submit" title="Register" onClick={() => handleClick()}/>
                 </form>
             </TwoColumnsLayout>

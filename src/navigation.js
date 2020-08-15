@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import Homepage from './pages/home/home'
 import BlogPage from './pages/blog/blog'
+import BlogArticlePage from './pages/blog-article/blog-article'
 import SignIn from './pages/sing-in/index'
 import SignInSuccess from './pages/sing-in-success/index'
 import SignUpSuccess from './pages/sing-up-success/index'
@@ -27,7 +28,7 @@ const Navigation = () => {
                     <Route path="/" exact component={ Homepage }/>
                     <Route path="/team" component={ TeamPage }/>
                     <PrivateRoute path="/profile" component={ ProfilePage }/>
-                    <Route path="/blog/:blogid" component={BlogPage} />
+                    <Route path="/blog/:blogid" component={BlogArticlePage} />
                     <Route path="/blog" component={ BlogPage }/>
                     <Route path="/services" component={ ServicesPage }/>
                     <Route path="/sign-in" component={ SignIn }/>

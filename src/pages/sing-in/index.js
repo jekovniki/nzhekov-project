@@ -42,7 +42,7 @@ const SignIn = ({ history }) => {
                 <form className={styles[`form-container`]} onSubmit={handleLogin}>
                     <Title title="Sign In" />
                     <Input value={email} onChange={(e) => setEmail(e.target.value)} label="E-mail" id="email" />
-                    <Input value={password} onChange={(e) => setPassword(e.target.value)} label="Password" id="password" />
+                    <Input value={password} onChange={(e) => setPassword(e.target.value)} label="Password" id="password" type="password" />
                     <MainBtn type="submit" title="Login" />
                 </form>
             </TwoColumnsLayout>

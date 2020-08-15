@@ -28,12 +28,13 @@ const PublishBlog = () => {
         }).finally (() => {
             setTitle('')
             setBody('')
+            setImage('')
         })
     }
 
     const handleClick = () => {
-        const blogData = ({title, body, select, imageURL})
-
+        const currentDate = new Date()
+        const blogData = ({title, body, select, imageURL, currentDate})
         submit(blogData)
     }
 

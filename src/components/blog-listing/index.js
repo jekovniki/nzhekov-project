@@ -17,15 +17,15 @@ const BlogListing = () => {
 
     const [allBlogs, setAllBlogs] = useState({})
 
-    useEffect( () => {content()})
+    useEffect( () => {content()}, [])
 
     return (
         <div className={styles[`blog-listing`]}>
             {
                 Object.entries(allBlogs).map(
-                    ([id, {title, body, select, imageURL}]) => {
+                    ([id, {title, body, select, imageURL, currentDate}]) => {
                         return (
-                            <BlogComponent title={title} body={body} tag={select} img={imageURL} />
+                            <BlogComponent title={title} body={body} tag={select} img={imageURL} href={`blog/${id}`} date={currentDate} />
                         )
                     }
                 ).reverse()
