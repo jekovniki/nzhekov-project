@@ -4,14 +4,15 @@ import SelectOptions from '../select-options/index'
 import getSpeciality from '../../utils/speciality'
 
 
-const Select = ({label, id}) => {
+const Select = ({label, id,...rest}) => {
+    console.log(rest)
     const options = getSpeciality()
     return(
         <div>
             <label for={id}>
                 {label}:
             </label>
-            <SelectOptions id={id} options={options} />
+            <SelectOptions {...rest}  id={id} options={options} />
         </div>
     )
 }

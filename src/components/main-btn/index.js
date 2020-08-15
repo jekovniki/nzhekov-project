@@ -1,9 +1,9 @@
 import React from 'react'
 import styles from './index.module.css'
 
-const MainBtn = ({title, type}) => {
+const MainBtn = ({title, type, ...rest}) => {
     return (
-    <button className={styles[`main-btn`]} type={type} >{ title }</button>
+    <button {...rest} className={styles[`main-btn`]} type={type} >{ title }</button>
     )
 }
 

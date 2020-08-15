@@ -1,0 +1,1 @@
+export const baseApiUrl = "https://softuni-project-nzhekov.firebaseio.com/Blogs/7kFNRNb136pQXLJ4li2W/"

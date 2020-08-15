@@ -1,0 +1,15 @@
+.blog-post {
+    display:flex;
+    flex-flow:column;
+    justify-content:space-around;
+    margin: 20px 0;
+}
+
+input {
+    width:100%;
+}
+
+textarea {
+    width:100%;
+    min-height:400px;
+}

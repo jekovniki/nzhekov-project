@@ -27,6 +27,7 @@ const Navigation = () => {
                     <Route path="/" exact component={ Homepage }/>
                     <Route path="/team" component={ TeamPage }/>
                     <PrivateRoute path="/profile" component={ ProfilePage }/>
+                    <Route path="/blog/:blogid" component={BlogPage} />
                     <Route path="/blog" component={ BlogPage }/>
                     <Route path="/services" component={ ServicesPage }/>
                     <Route path="/sign-in" component={ SignIn }/>
