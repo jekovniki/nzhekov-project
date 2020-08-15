@@ -8,12 +8,14 @@ import Title from '../../components/title'
 import Select from '../../components/select'
 import app from '../../base'
 import { withRouter } from 'react-router-dom'
+import { baseApiUrl} from '../../utils/consts'
 
 
 const SignUp = ({ history }) => {
     const handleSignUp = useCallback(async event => {
         event.preventDefault();
-        const { email, username, firstname, lastname, speciality, password, repassword} = event.target.elements;
+        const { email, password} = event.target.elements;
+
         try {
             await app
             .auth()
@@ -24,12 +26,30 @@ const SignUp = ({ history }) => {
         }
     }, [history])
 
+    const submit = (data) => {
+        fetch(baseApiUrl + "user.json", {
+            method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+    }
+
+    const handleClick = () => {
+        const userData = ({firstname, lastname, select, imageURL})
+
+        submit(userData)
+    }
+
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [firstname, setFirstName] = useState('')
     const [lastname, setLastName] = useState('')
-    const [repassword, setRePassword] = useState('')
     const [email, setEmail] = useState('')
+    const [select, setSelect] =useState('')
+    const [imageURL, setImage] = useState('')
 
  // <Input value={username} onChange={(e) => setUsername(e.target.value)} label="Username" id="username" />
 
@@ -44,12 +64,12 @@ const SignUp = ({ history }) => {
                     <p>Register form for lawyers.</p>
                     <Input value={username} onChange={(e) => setUsername(e.target.value)} label="Username" id="username" />
                     <Input value={email} onChange={(e) => setEmail(e.target.value)} label="E-mail" id="email" />
+                    <Input value={imageURL} onChange={(e) => setImage(e.target.value)} label="Photo" id="image" placeholder="Place Image URL" />
                     <Input value={firstname} onChange={(e) => setFirstName(e.target.value)} label="First Name" id="firstname" />
                     <Input value={lastname} onChange={(e) => setLastName(e.target.value)} label="Last Name" id="lastname" />
-                    <Select label="Select speciality" id="speciality" />
+                    <Select label="Select speciality" id="speciality" onChange={(e) => {console.log(e);setSelect(e.target.value)}} />
                     <Input value={password} onChange={(e) => setPassword(e.target.value)} label="Password" id="password" />
-                    <Input value={repassword} onChange={(e) => setRePassword(e.target.value)} label="Re-Password" id="repassword" />
-                    <MainBtn type="submit" title="Register" />
+                    <MainBtn type="submit" title="Register" onClick={() => handleClick()}/>
                 </form>
             </TwoColumnsLayout>
         </MainWrapper>
