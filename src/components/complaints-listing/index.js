@@ -1,31 +1,33 @@
 import React, { useState, useEffect } from 'react'
 import styles from './index.module.css'
-import BlogComponent from '../blog-component/index'
+import SectionTitle from '../section-title/index'
+import ComplaintsComponent from '../complaints-component/index'
 import { baseApiUrl} from '../../utils/consts'
 
-const BlogListing = () => {
+const ComplaintsListing = () => {
     const content = () => {
-        fetch(baseApiUrl + "blogs.json", {
+        fetch(baseApiUrl + "complaints.json", {
             method: 'GET', 
             headers: {
                 'Content-Type': 'application/json',
             }
         })
         .then(response => response.json())
-        .then((data) => {setAllBlogs(data); console.log(Object.entries(data))})
+        .then((data) => {setAllComplaints(data)})
     }
 
-    const [allBlogs, setAllBlogs] = useState({})
+    const [allComplaints, setAllComplaints] = useState({})
 
     useEffect( () => {content()})
 
     return (
-        <div className={styles[`blog-listing`]}>
+        <div className={styles[`complaints-listing`]}>
+            <SectionTitle section="Latest Complaints" />
             {
-                Object.entries(allBlogs).map(
+                Object.entries(allComplaints).map(
                     ([id, {title, body, select}]) => {
                         return (
-                            <BlogComponent title={title} body={body} tag={select} />
+                            <ComplaintsComponent title={title} body={body}/>
                         )
                     }
                 ).reverse()
@@ -34,4 +36,4 @@ const BlogListing = () => {
     )
 }
 
-export default BlogListing
+export default ComplaintsListing
