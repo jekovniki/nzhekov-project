@@ -4,6 +4,10 @@
     margin: 20px 10%;
 }
 
+.complaint label{
+    display:none;
+}
+
 @media screen and (min-width:786px) {
     .complaint button {
         width:200px;
@@ -11,10 +15,18 @@
     }
     .complaint input {
         margin-bottom:20px;
-        width:99%;
+        width:97%;
     }
     .complaint textarea {
         width:100%;
         min-height:300px;
+    }
+    .complaint > .row {
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    .complaint > .row > div {
+        flex-basis:100%;
     }
 }

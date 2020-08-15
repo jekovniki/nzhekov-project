@@ -32,7 +32,7 @@ const PublishBlog = () => {
     }
 
     const handleClick = () => {
-        const blogData = ({title, body, select})
+        const blogData = ({title, body, select, imageURL})
 
         submit(blogData)
     }
@@ -41,11 +41,13 @@ const PublishBlog = () => {
     const [title, setTitle] = useState('')
     const [body, setBody] = useState('')
     const [select, setSelect] =useState('')
-    console.log(select)
+    const [imageURL, setImage] = useState('')
+
     return (
         <form className={styles[`blog-post`]}>
             <SectionTitle section="Publish Blog Post" />
             <Input value={title} onChange={(e) => setTitle(e.target.value)} label="Title" id="title" />
+            <Input value={imageURL} onChange={(e) => setImage(e.target.value)} label="Image" id="image" placeholder="Place Image URL" />
             <Textarea label="Text:" body={body} onChange={(e) => {console.log(e);setBody(e.target.value)}}/>
             <Select label="Speciality" onChange={(e) => {console.log(e);setSelect(e.target.value)}} />
             <MainBtn type="button" title="Submit" onClick={() => handleClick()}/>

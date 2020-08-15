@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Subtitle from '../subtitle/index'
+import SectionTitle from '../section-title/index'
 import Input from '../input/index'
 import MainBtn from '../main-btn/index'
 import styles from './index.module.css'
@@ -26,25 +26,34 @@ const SendComplaint = () => {
             console.error('Error:', error);
             alert('Something went wrong')
         }).finally (() => {
-            setTitle('')
+            setFirstName('')
             setBody('')
         })
     }
 
     const handleClick = () => {
-        const blogData = ({title, body})
+        const blogData = ({firstName, lastName, email, phone, body})
 
         submit(blogData)
     }
 
 
-    const [title, setTitle] = useState('')
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
     const [body, setBody] = useState('')
     return (
         <form className={styles.complaint}>
-            <Subtitle subtitle="Tell us about your issue"/>
-            <Input value={title} onChange={(e) => setTitle(e.target.value)} label="Title" id="title" />
-            <Textarea label="Text:" body={body} onChange={(e) => {console.log(e);setBody(e.target.value)}}/>
+            <SectionTitle section="Tell us about your issue"/>
+            <div className={styles.row}>
+                <Input value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="First name" id="firstName" />
+                <Input value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last name" id="lastName" /></div>
+            <div className={styles.row}>
+                <Input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" id="email" />
+                <Input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone" id="phone" />
+            </div>
+            <Textarea placeholder="Case Description..." label="Text:" body={body} onChange={(e) => {console.log(e);setBody(e.target.value)}}/>
             <MainBtn type="button" title="Send" onClick={() => handleClick()}/>
         </form>
     )

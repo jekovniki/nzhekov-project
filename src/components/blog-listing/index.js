@@ -23,9 +23,9 @@ const BlogListing = () => {
         <div className={styles[`blog-listing`]}>
             {
                 Object.entries(allBlogs).map(
-                    ([id, {title, body, select}]) => {
+                    ([id, {title, body, select, imageURL}]) => {
                         return (
-                            <BlogComponent title={title} body={body} tag={select} />
+                            <BlogComponent title={title} body={body} tag={select} img={imageURL} />
                         )
                     }
                 ).reverse()
