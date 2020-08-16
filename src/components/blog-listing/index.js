@@ -25,7 +25,7 @@ const BlogListing = () => {
                 Object.entries(allBlogs).map(
                     ([id, {title, body, select, imageURL, currentDate}]) => {
                         return (
-                            <BlogComponent title={title} body={body} tag={select} img={imageURL} href={`blog/${id}`} date={currentDate} />
+                            <BlogComponent title={title} body={body.slice(0, 418)} tag={select} img={imageURL} href={`blog/${id}`} date={currentDate} />
                         )
                     }
                 ).reverse()

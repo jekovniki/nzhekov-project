@@ -1,0 +1,48 @@
+.blog-homepage {
+    margin: 20px 10%;
+    display: flex;
+    width:80%;
+}
+
+.blog-homepage .homepage-blog {
+    flex:2;
+    margin:0 20px
+}
+
+.blog-homepage .homepage-blog > div > div > p {
+    display:none;
+}
+
+.blog-homepage .homepage-blog > div > div + h3 + div > p {
+    display:block;
+}
+
+.blog-homepage .homepage-blog > div > div:last-child {
+    display:none;
+}
+
+.blog-homepage > .blog {
+    flex:1;
+    text-align:left;
+}
+
+.blog-homepage > .blog .small-title {
+    font-weight:700;
+    font-size:0.875rem;
+    color:#c9b38c;
+}
+
+.blog-homepage > .blog .headline {
+    font-size: 2.25rem;
+    margin: 0 0 0.69em;
+    line-height:1.19em;
+}
+
+.blog-homepage > .blog > .button button {
+    margin:20px 0;
+}
+
+.blog-homepage > .blog > .button button:hover {
+    background-color:#999999;
+    color:#ffffff;
+}
