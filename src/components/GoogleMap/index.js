@@ -17,7 +17,7 @@ class GoogleMap extends Component {
     return (
       <div className={styles.map}>
         <GoogleMapReact
-          bootstrapURLKeys="AIzaSyAVwkE4Fg3zOOzV1ClcsWugDJwh0_tkJF4"
+          bootstrapURLKeys='AIzaSyAVwkE4Fg3zOOzV1ClcsWugDJwh0_tkJF4'
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >

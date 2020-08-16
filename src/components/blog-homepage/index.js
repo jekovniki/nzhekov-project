@@ -35,9 +35,6 @@ const BlogHomepage = () => {
                         Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nuncIt showed a lady fitted
                     </p>
                 </div>
-                <div className={styles.button}>
-                    <MainBtn path="/blog" title="Go to blog" />
-                </div>
             </div>
             {
                 Object.entries(allBlogs).map(
