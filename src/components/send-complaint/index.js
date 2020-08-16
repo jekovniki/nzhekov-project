@@ -27,6 +27,9 @@ const SendComplaint = () => {
             alert('Something went wrong')
         }).finally (() => {
             setFirstName('')
+            setLastName('')
+            setEmail('')
+            setPhone('')
             setBody('')
         })
     }

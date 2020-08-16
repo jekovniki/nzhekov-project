@@ -2,5 +2,15 @@
     width:100%;
     display:flex;
     flex-flow:column;
+    margin: 20px 0;
 }
 
+.guest-contacts {
+    display: flex;
+    justify-content: space-around;
+    margin:10px 0;
+}
+
+.guest-contacts .email, .phone {
+    flex:1;
+}

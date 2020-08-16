@@ -25,9 +25,9 @@ const ComplaintsListing = () => {
             <SectionTitle section="Latest Complaints" />
             {
                 Object.entries(allComplaints).map(
-                    ([id, {title, body, select}]) => {
+                    ([id, { body, phone, firstName, lastName, email}]) => {
                         return (
-                            <ComplaintsComponent title={title} body={body}/>
+                            <ComplaintsComponent firstname={firstName} lastname={lastName} body={body} phone={phone} email={email}/>
                         )
                     }
                 ).reverse()
